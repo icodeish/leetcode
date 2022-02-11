@@ -1,9 +1,6 @@
 //解法1
 let nums1 = [1, 2, 2, 1]
 let nums2 = [2, 2]
-// console.log(nums1.indexOf(2))
-// nums1.splice(1,1)
-// console.log(nums1)
 var intersect = function (nums1, nums2) {
     if (nums1.length > nums2.length) {
         nums3 = nums1
