@@ -7,7 +7,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
         return a - b
     })
     if (new_arr.length%2 === 0)
-        return (new_arr[parseInt(new_arr.length / 2)] + new_arr[parseInt(new_arr.length / 2) - 1]) / 2
+        return (new_arr[new_arr.length / 2] + new_arr[new_arr.length / 2 - 1]) / 2
         return new_arr[parseInt(new_arr.length / 2)] 
 
 };
