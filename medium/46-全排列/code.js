@@ -1,14 +1,19 @@
 //解法 1
-let nums=[1,2,3]
-function permute(nums){
-  let res=[]
-  function add(nums){
-      for(let i=0;i<nums.length;i++){
-          let arr=[]
-          if(arr.indexOf(nums[i])===-1){
-              arr.push(nums[i])
-          }
-      }
-  }
-  return res
+function permute(nums) {
+    let res = []
+    let set = new Set()
+    function dfs() {
+        if (set.size === nums.length) {
+            res.push(Array.from(set))
+            return
+        }
+        for (let i = 0; i < nums.length; i++) {
+            if (set.has(nums[i])) continue
+            set.add(nums[i])
+            dfs()
+            set.delete(nums[i])
+        }
+    }
+    dfs()
+    return res
 }
