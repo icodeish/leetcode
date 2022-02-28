@@ -19,14 +19,14 @@ let root = {
         right: null
     }
 }
-function inorderTraversal(root) {
-    let res = []
-    inorder(root)
-    function inorder(root) {
-        if (!root) return
-        inorder(root.left)
+function preorderTraversal(root){
+    let res=[]
+    preorder(root)
+    function preorder(root){
+        if(!root) return
         res.push(root.val)
-        inorder(root.right)
+        preorder(root.left)
+        preorder(root.right)
     }
     return res
 }
