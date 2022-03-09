@@ -1,6 +1,7 @@
 function generateParenthesis(n) {
     let res = []
     function dfs(left, right, str) {
+        console.log(left,right,str)
         if (str.length === 2 * n) {
             res.push(str)
             return
@@ -15,4 +16,5 @@ function generateParenthesis(n) {
     dfs(n, n, '')
     return res
 }
-console.log(generateParenthesis(3))
+console.log(generateParenthesis(2))
+ 
