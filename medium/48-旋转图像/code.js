@@ -1,5 +1,5 @@
 //解法1
-var matrix = [[1,2,3],[4,5,6],[7,8,9]]
+var matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 /**
  * 1 2 3  7 4 1
@@ -10,22 +10,20 @@ var matrix = [[1,2,3],[4,5,6],[7,8,9]]
  * @param {*} matrix 
  * @returns 
  */
-var rotate = function(matrix) {
-    let arr= new Array(matrix.length)
-    for(let i=0;i<matrix.length;i++){
-        arr[i]=new Array(matrix.length)
+var rotate = function (matrix) {
+    let len = matrix.length
+    let new_matrix = new Array(len).fill(0).map(() => new Array(len).fill(0))
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            //new_matrix[j][len -1-i] = matrix[i][j]
+            new_matrix[i][j] = matrix[len - 1 - j][i]
+        }
     }
-    arr[0][0]=1
-    console.log(arr)
-  
-    var j=0
-    for(let i=matrix.length-1;0<=i;i--){
-            
-         
-            
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            matrix[i][j] = new_matrix[i][j]
+        }
     }
-    return arr
-   
-   
-};
+    return matrix
+}
 console.log(rotate(matrix))
