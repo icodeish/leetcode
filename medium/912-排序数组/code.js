@@ -15,14 +15,19 @@ const nums = [5, 2, 3, 1]
 
 //2.选择排序
 //原理:从待排序数组中找出最小元素放到i位置上
-function sortArray(nums) {
-    for (let i = 0; i < nums.length - 1; i++) {
-        let min_index = i
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[j] < nums[min_index]) min_index = j
-        }
-        if (i !== min_index) [nums[i], nums[min_index]] = [nums[min_index], nums[i]]
-    }
-    return nums
+// function sortArray(nums) {
+//     for (let i = 0; i < nums.length - 1; i++) {
+//         let min_index = i
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[j] < nums[min_index]) min_index = j
+//         }
+//         if (i !== min_index) [nums[i], nums[min_index]] = [nums[min_index], nums[i]]
+//     }
+//     return nums
+// }
+// console.log(sortArray(nums))
+
+//3.插入排序
+function sortArray(nums){
+
 }
-console.log(sortArray(nums))
